@@ -1,0 +1,12 @@
+USEUNIT("Main.cpp");
+USEUNIT("..\..\..\Params.cpp");
+USEFORM("Interface.cpp", FormInterface);
+USELIB("..\Driver\GPIB-32.lib");
+USERES("Interface2535.res");
+USEUNIT("..\..\..\Measure.cpp");
+USEFORM("Single.cpp", FormSingle);
+USEUNIT("..\Driver\PM2535.cpp");
+//---------------------------------------------------------------------------
+This file is used by the project manager only and should be treated like the project file
+
+DllEntryPoint

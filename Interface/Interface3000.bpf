@@ -1,9 +1,0 @@
-USEUNIT("Main.cpp");
-USEUNIT("..\Driver\PM3000.cpp");
-USEUNIT("E:\Params.cpp");
-USEFORM("Interface.cpp", FormInterface);
-USELIB("..\Driver\GPIB-32.lib");
-//---------------------------------------------------------------------------
-This file is used by the project manager only and should be treated like the project file
-
-DllEntryPoint

@@ -1,0 +1,797 @@
+object FormInterface: TFormInterface
+  Left = 180
+  Top = 118
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Mutimeter2535 Interface'
+  ClientHeight = 540
+  ClientWidth = 545
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 521
+    Width = 545
+    Height = 19
+    Panels = <
+      item
+        Alignment = taCenter
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object Panel6: TPanel
+    Left = 0
+    Top = 0
+    Width = 545
+    Height = 48
+    Align = alTop
+    TabOrder = 1
+    object Panel3: TPanel
+      Left = 4
+      Top = 4
+      Width = 256
+      Height = 40
+      TabOrder = 0
+      object Panel4: TPanel
+        Left = 5
+        Top = 4
+        Width = 245
+        Height = 31
+        BevelInner = bvLowered
+        BevelOuter = bvLowered
+        BevelWidth = 3
+        TabOrder = 0
+        object CGauge1: TCGauge
+          Left = 6
+          Top = 6
+          Width = 233
+          Height = 19
+          Align = alClient
+          ForeColor = 16724787
+          BackColor = clSilver
+        end
+      end
+    end
+    object Panel5: TPanel
+      Left = 263
+      Top = 4
+      Width = 171
+      Height = 40
+      TabOrder = 1
+      object Panel2: TPanel
+        Left = 5
+        Top = 4
+        Width = 161
+        Height = 31
+        BevelInner = bvLowered
+        BevelOuter = bvLowered
+        BevelWidth = 3
+        Color = clBlack
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 10944422
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object Panel10: TPanel
+      Left = 438
+      Top = 4
+      Width = 102
+      Height = 40
+      BevelInner = bvLowered
+      BevelOuter = bvLowered
+      BevelWidth = 3
+      BorderWidth = 2
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clAqua
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object Panel7: TPanel
+    Left = 0
+    Top = 48
+    Width = 214
+    Height = 473
+    Align = alLeft
+    TabOrder = 2
+    object GroupBox4: TGroupBox
+      Left = 5
+      Top = 3
+      Width = 204
+      Height = 263
+      Caption = 'Output Parameters'
+      TabOrder = 0
+      object ComboBox1: TComboBox
+        Left = 8
+        Top = 16
+        Width = 187
+        Height = 21
+        ItemHeight = 13
+        TabOrder = 0
+        OnChange = ComboBox1Change
+      end
+      object ComboBox2: TComboBox
+        Tag = 1
+        Left = 8
+        Top = 38
+        Width = 187
+        Height = 21
+        ItemHeight = 13
+        TabOrder = 1
+        OnChange = ComboBox1Change
+      end
+      object ComboBox3: TComboBox
+        Tag = 2
+        Left = 8
+        Top = 60
+        Width = 187
+        Height = 21
+        ItemHeight = 13
+        TabOrder = 2
+        OnChange = ComboBox3Change
+      end
+      object ListBox1: TListBox
+        Left = 8
+        Top = 105
+        Width = 187
+        Height = 126
+        ItemHeight = 13
+        PopupMenu = PopupMenu1
+        TabOrder = 3
+      end
+      object BitBtn3: TBitBtn
+        Left = 64
+        Top = 234
+        Width = 75
+        Height = 25
+        Caption = '&Trigger'
+        Default = True
+        TabOrder = 4
+        OnClick = BitBtn3Click
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+      object ComboBox5: TComboBox
+        Tag = 2
+        Left = 8
+        Top = 82
+        Width = 187
+        Height = 21
+        ItemHeight = 13
+        TabOrder = 5
+        OnChange = ComboBox5Change
+      end
+    end
+    object Panel1: TPanel
+      Left = 5
+      Top = 270
+      Width = 204
+      Height = 197
+      BevelInner = bvLowered
+      TabOrder = 1
+      object GroupBox1: TGroupBox
+        Left = 7
+        Top = 7
+        Width = 189
+        Height = 45
+        Caption = 'Start Time'
+        TabOrder = 0
+        object DateTimePicker1: TDateTimePicker
+          Left = 9
+          Top = 16
+          Width = 81
+          Height = 21
+          CalAlignment = dtaLeft
+          Date = 37182.8363633102
+          Time = 37182.8363633102
+          DateFormat = dfShort
+          DateMode = dmComboBox
+          Kind = dtkTime
+          ParseInput = False
+          TabOrder = 0
+        end
+        object DateTimePicker2: TDateTimePicker
+          Left = 93
+          Top = 16
+          Width = 87
+          Height = 21
+          CalAlignment = dtaLeft
+          Date = 37182.8366734954
+          Time = 37182.8366734954
+          DateFormat = dfShort
+          DateMode = dmComboBox
+          Kind = dtkDate
+          ParseInput = False
+          TabOrder = 1
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 7
+        Top = 55
+        Width = 189
+        Height = 45
+        Caption = 'End Time'
+        TabOrder = 1
+        object DateTimePicker3: TDateTimePicker
+          Left = 9
+          Top = 16
+          Width = 81
+          Height = 21
+          CalAlignment = dtaLeft
+          Date = 37182.8363633102
+          Time = 37182.8363633102
+          DateFormat = dfShort
+          DateMode = dmComboBox
+          Kind = dtkTime
+          ParseInput = False
+          TabOrder = 0
+        end
+        object DateTimePicker4: TDateTimePicker
+          Left = 93
+          Top = 16
+          Width = 87
+          Height = 21
+          CalAlignment = dtaLeft
+          Date = 37182.8366734954
+          Time = 37182.8366734954
+          DateFormat = dfShort
+          DateMode = dmComboBox
+          Kind = dtkDate
+          ParseInput = False
+          TabOrder = 1
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 7
+        Top = 103
+        Width = 189
+        Height = 58
+        Caption = 'Time Step'
+        TabOrder = 2
+        object Label1: TLabel
+          Left = 13
+          Top = 14
+          Width = 28
+          Height = 13
+          Caption = 'Hours'
+        end
+        object Label2: TLabel
+          Left = 53
+          Top = 14
+          Width = 37
+          Height = 13
+          Caption = 'Minutes'
+        end
+        object Label3: TLabel
+          Left = 102
+          Top = 14
+          Width = 24
+          Height = 13
+          Caption = 'Secs'
+        end
+        object Label4: TLabel
+          Left = 150
+          Top = 14
+          Width = 16
+          Height = 13
+          Caption = 'MS'
+        end
+        object CSpinEdit1: TCSpinEdit
+          Left = 6
+          Top = 30
+          Width = 44
+          Height = 22
+          TabStop = True
+          MaxValue = 750
+          ParentColor = False
+          TabOrder = 0
+        end
+        object CSpinEdit2: TCSpinEdit
+          Left = 50
+          Top = 30
+          Width = 44
+          Height = 22
+          TabStop = True
+          MaxValue = 59
+          ParentColor = False
+          TabOrder = 1
+        end
+        object CSpinEdit3: TCSpinEdit
+          Left = 94
+          Top = 30
+          Width = 44
+          Height = 22
+          TabStop = True
+          MaxValue = 59
+          ParentColor = False
+          TabOrder = 2
+        end
+        object CSpinEdit4: TCSpinEdit
+          Left = 138
+          Top = 30
+          Width = 44
+          Height = 22
+          TabStop = True
+          MaxValue = 999
+          MinValue = 1
+          ParentColor = False
+          TabOrder = 3
+          Value = 1
+        end
+      end
+      object BitBtn4: TBitBtn
+        Left = 26
+        Top = 166
+        Width = 75
+        Height = 25
+        Caption = '&Start'
+        TabOrder = 3
+        OnClick = BitBtn4Click
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000130B0000130B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333333333333333333EEEEEEEEEEEEEEE333FFFFFFFFFFFFF3E00000000000
+          00E337777777777777F3E0F77777777770E337F33333333337F3E0F333333333
+          70E337F3333F333337F3E0F33303333370E337F3337FF33337F3E0F333003333
+          70E337F33377FF3337F3E0F33300033370E337F333777FF337F3E0F333000033
+          70E337F33377773337F3E0F33300033370E337F33377733337F3E0F333003333
+          70E337F33377333337F3E0F33303333370E337F33373333337F3E0F333333333
+          70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
+          00E33777777777777733EEEEEEEEEEEEEEE33333333333333333}
+        NumGlyphs = 2
+      end
+      object BitBtn1: TBitBtn
+        Left = 102
+        Top = 166
+        Width = 75
+        Height = 25
+        Caption = 'St&op'
+        TabOrder = 4
+        OnClick = BitBtn1Click
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000130B0000130B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333333333333333333EEEEEEEEEEEEEEE333FFFFFFFFFFFFF3E00000000000
+          00E337777777777777F3E0F77777777770E337F33333333337F3E0F333333333
+          70E337F33333333337F3E0F33333333370E337F333FFFFF337F3E0F330000033
+          70E337F3377777F337F3E0F33000003370E337F3377777F337F3E0F330000033
+          70E337F3377777F337F3E0F33000003370E337F3377777F337F3E0F330000033
+          70E337F33777773337F3E0F33333333370E337F33333333337F3E0F333333333
+          70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
+          00E33777777777777733EEEEEEEEEEEEEEE33333333333333333}
+        NumGlyphs = 2
+      end
+    end
+  end
+  object Panel8: TPanel
+    Left = 214
+    Top = 48
+    Width = 331
+    Height = 473
+    Align = alClient
+    TabOrder = 3
+    object Panel9: TPanel
+      Left = 1
+      Top = 1
+      Width = 329
+      Height = 288
+      Align = alTop
+      TabOrder = 0
+      object Label5: TLabel
+        Left = 4
+        Top = 4
+        Width = 83
+        Height = 13
+        Caption = 'Output Parameter'
+      end
+      object Label7: TLabel
+        Left = 191
+        Top = 3
+        Width = 60
+        Height = 13
+        Caption = 'Points Count'
+      end
+      object ComboBox4: TComboBox
+        Left = 5
+        Top = 20
+        Width = 187
+        Height = 21
+        ItemHeight = 13
+        TabOrder = 0
+      end
+      object CheckBox1: TCheckBox
+        Left = 261
+        Top = 1
+        Width = 57
+        Height = 17
+        Caption = 'Enable'
+        TabOrder = 1
+      end
+      object Panel12: TPanel
+        Left = 258
+        Top = 19
+        Width = 66
+        Height = 22
+        BevelInner = bvLowered
+        BevelOuter = bvLowered
+        Color = clBlack
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 10944422
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 2
+      end
+      object DBChart1: TDBChart
+        Left = 5
+        Top = 44
+        Width = 319
+        Height = 238
+        BackWall.Brush.Color = clWhite
+        BackWall.Color = clBlack
+        MarginLeft = 4
+        MarginRight = 4
+        Title.Text.Strings = (
+          'Runtime Graph')
+        BackColor = clBlack
+        BottomAxis.Axis.Visible = False
+        BottomAxis.Grid.Color = 8453888
+        BottomAxis.Grid.Style = psSolid
+        Chart3DPercent = 5
+        DepthAxis.Visible = True
+        LeftAxis.Axis.Width = 1
+        LeftAxis.Axis.Visible = False
+        LeftAxis.ExactDateTime = False
+        LeftAxis.Grid.Color = 8453888
+        LeftAxis.Grid.Style = psSolid
+        LeftAxis.StartPosition = 5
+        LeftAxis.EndPosition = 95
+        LeftAxis.TickLength = 0
+        LeftAxis.TickOnLabelsOnly = False
+        Legend.Visible = False
+        View3D = False
+        BevelInner = bvLowered
+        BevelWidth = 5
+        BorderStyle = bsSingle
+        TabOrder = 3
+        object Series1: TLineSeries
+          Marks.ArrowLength = 8
+          Marks.Visible = False
+          SeriesColor = 4210943
+          ShowInLegend = False
+          LinePen.Color = 4868863
+          LinePen.Width = 2
+          Pointer.InflateMargins = False
+          Pointer.Style = psRectangle
+          Pointer.Visible = False
+          XValues.DateTime = False
+          XValues.Name = 'X'
+          XValues.Multiplier = 1
+          XValues.Order = loAscending
+          YValues.DateTime = False
+          YValues.Name = 'Y'
+          YValues.Multiplier = 1
+          YValues.Order = loNone
+        end
+      end
+      object CSpinEdit5: TCSpinEdit
+        Left = 196
+        Top = 19
+        Width = 51
+        Height = 22
+        TabStop = True
+        MaxValue = 1000
+        MinValue = 5
+        ParentColor = False
+        TabOrder = 4
+        Value = 100
+        OnChange = CSpinEdit5Change
+      end
+    end
+    object Panel11: TPanel
+      Left = 1
+      Top = 289
+      Width = 329
+      Height = 183
+      Align = alClient
+      TabOrder = 1
+      object Panel13: TPanel
+        Left = 1
+        Top = 1
+        Width = 327
+        Height = 31
+        Align = alTop
+        BevelInner = bvLowered
+        TabOrder = 0
+        object Label6: TLabel
+          Left = 6
+          Top = 9
+          Width = 20
+          Height = 13
+          Caption = 'Title'
+        end
+        object Edit1: TEdit
+          Left = 30
+          Top = 5
+          Width = 150
+          Height = 21
+          TabOrder = 0
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 1
+        Top = 32
+        Width = 327
+        Height = 150
+        Align = alClient
+        Caption = 'Comments'
+        TabOrder = 1
+        object RichEdit1: TRichEdit
+          Left = 8
+          Top = 16
+          Width = 312
+          Height = 126
+          ScrollBars = ssVertical
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 301
+    Top = 414
+  end
+  object Timer2: TTimer
+    OnTimer = Timer2Timer
+    Left = 329
+    Top = 414
+  end
+  object ActionList1: TActionList
+    Images = ImageList1
+    Left = 329
+    Top = 442
+    object AMeasure: TAction
+      Category = 'Measure'
+      Caption = '&Measure'
+      OnExecute = AMeasureExecute
+    end
+    object ANewMeasure: TAction
+      Category = 'Measure'
+      Caption = '&New Measure'
+      ImageIndex = 0
+      OnExecute = ANewMeasureExecute
+    end
+    object AClose: TAction
+      Category = 'Measure'
+      Caption = '&Close'
+      ImageIndex = 1
+      OnExecute = ACloseExecute
+    end
+  end
+  object MainMenu1: TMainMenu
+    Images = ImageList1
+    Left = 301
+    Top = 442
+    object Measure1: TMenuItem
+      Action = AMeasure
+      object NewMeasure1: TMenuItem
+        Action = ANewMeasure
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Close1: TMenuItem
+        Action = AClose
+      end
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 85
+    Top = 195
+    object Delete1: TMenuItem
+      Caption = '&Delete'
+      OnClick = Delete1Click
+    end
+    object DeleteAll1: TMenuItem
+      Caption = 'Delete &All'
+      OnClick = DeleteAll1Click
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'db'
+    Filter = 'Result File (*.db)|*.db'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 357
+    Top = 414
+  end
+  object ImageList1: TImageList
+    Left = 357
+    Top = 442
+    Bitmap = {
+      494C010102000400040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      0000000000003600000028000000400000001000000001002000000000000010
+      0000000000000000000000000000000000000000000000000000000000000000
+      8000000000000000000000000000000000000000000000000000000000000000
+      8000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000080000000
+      000000000000000000000000FF00000000000000FF0000000000000000000000
+      0000000080000000000000000000000000000000000000000000000000000000
+      0000000000000000FF000000FF000000FF000000FF000000FF00000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      00000000FF00BFBFBF00FFFFFF0000000000FFFFFF00BFBFBF000000FF000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000
+      FF00000000000000000000000000000000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF000000000000000000000000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00000000000000000000000000000000007F7F7F00000000000000
+      FF00BFBFBF0000000000FFFFFF00FFFFFF00FFFFFF0000000000BFBFBF000000
+      FF00000000007F7F7F00000000000000000000000000000000000000FF000000
+      FF0000000000000000007F7F7F00000000007F7F7F00000000000000FF000000
+      FF000000FF00000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000000000FF000000
+      FF00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      FF000000FF00000000000000000000000000000000000000FF000000FF000000
+      FF000000FF000000000000000000000000000000000000000000000000000000
+      FF000000FF000000FF0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000000000000000FF000000
+      0000FFFFFF00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00000000000000
+      00000000FF00000000000000000000000000000000000000FF00000000000000
+      FF000000FF000000FF007F7F7F00000000007F7F7F0000000000000000000000
+      00000000FF000000FF000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000000000000000FF000000
+      FF00FFFFFF00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00FFFFFF000000
+      FF000000FF000000000000000000000000000000FF000000FF00000000000000
+      00000000FF000000FF000000FF00000000000000000000000000000000000000
+      0000000000000000FF000000FF0000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000007F7F7F00000000000000
+      FF00BFBFBF0000000000FFFFFF0000000000FFFFFF0000000000BFBFBF000000
+      FF00000000007F7F7F0000000000000000000000FF000000FF00000000000000
+      0000000000000000FF000000FF00000000000000000000000000000000000000
+      0000000000000000FF000000FF0000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      00000000FF00BFBFBF00FFFFFF0000000000FFFFFF00BFBFBF000000FF000000
+      0000000000000000000000000000000000000000FF000000FF00000000000000
+      000000000000000000007F7F7F00000000007F7F7F0000000000000000000000
+      0000000000000000FF000000FF0000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000000000FF000000FF000000FF000000FF000000FF00000000000000
+      0000000000000000000000000000000000000000FF000000FF00000000000000
+      000000000000000000000000800000000000000080000000FF00000000000000
+      0000000000000000FF000000FF0000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00000080000000000000000000000000000000FF000000
+      00000000FF00000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00000080000000000000000000000000000000FF000000
+      00000000FF0000000000000000000000000000000000BFBFBF00BFBFBF007F7F
+      7F0000000000000000000000000000000000000000000000000000000000BFBF
+      BF007F7F7F007F7F7F0000000000000000000000FF000000FF00000000000000
+      000000000000000000000000000000000000000000000000FF000000FF000000
+      0000000000000000FF000000FF0000000000FFFFFF00FFFFFF0000000000FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF000000FF000000FF0000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF000000FF000000FF0000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000BFBFBF00BFBFBF00BFBF
+      BF00BFBFBF007F7F7F007F7F7F00000000007F7F7F00BFBFBF00BFBFBF00BFBF
+      BF00BFBFBF007F7F7F000000000000000000000000000000FF000000FF000000
+      000000000000000000000000000000000000000000000000FF000000FF000000
+      FF00000000000000FF000000000000000000000000007F7F7F00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00000000000000FF000000FF00000000007F7F7F00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00000000000000FF000000FF0000000000000000007F7F7F00BFBF
+      BF00BFBFBF00000000007F7F7F00000000007F7F7F0000000000BFBFBF00BFBF
+      BF007F7F7F00000000000000000000000000000000000000FF000000FF000000
+      FF000000000000000000000000000000000000000000000000000000FF000000
+      FF000000FF000000FF000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0000000000000000000000000000000000000000000000FF000000FF000000
+      FF000000FF000000FF000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0000000000000000000000000000000000000000000000FF000000FF000000
+      FF000000FF000000FF00000000000000000000000000000000007F7F7F000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00007F7F7F0000000000000000000000000000000000000000000000FF000000
+      FF000000FF00000000007F7F7F00000000007F7F7F0000000000000000000000
+      FF000000FF00000000000000000000000000BFBFBF00000000007F7F7F000000
+      00007F7F7F0000000000BFBFBF00BFBFBF007F7F7F0000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00BFBFBF00000000007F7F7F000000
+      00007F7F7F0000000000BFBFBF00BFBFBF007F7F7F0000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000
+      FF0000000000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000FF000000FF000000FF000000FF000000FF00000000000000
+      00000000000000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00424D3E000000000000003E000000
+      2800000040000000100000000100010000000000800000000000000000000000
+      000000000000000000000000FFFFFF008823FFFF0000FF00C007F83F0000FF00
+      C007E00F0000FF008003CC470000FF0080038463FFFFFF008003A073FFFFFF00
+      800331F9FFFFFF00800338F9FFFFFF00C0073C790000FF0000013C390000FF00
+      00013C190000FF0000019C0BFFFFFF0080038C43FFFFFF00C6C7C46700000000
+      FC7FE00F00000000FFFFF83F0000000000000000000000000000000000000000
+      000000000000}
+  end
+  object Table1: TTable
+    Left = 113
+    Top = 195
+  end
+end

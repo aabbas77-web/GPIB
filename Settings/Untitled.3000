@@ -1,0 +1,53 @@
+[Frequency_Source]
+Index=0
+
+[VoltsAmps]
+Index=1
+
+[Coupling]
+Index=1
+
+[Internal_External]
+Index=1
+
+[Volt Range]
+Index=0
+
+[Current Range]
+Index=0
+
+[Wiring]
+Index=0
+
+[Harmonic]
+Index=0
+
+[Channel]
+Index=1
+
+[Function_List]
+Index=0
+
+[Select_List]
+Index=0
+
+[Fundamental_List]
+Index=0
+
+[IEC_Mode]
+Index=0
+
+[Ballast]
+Index=0
+
+[Averaging]
+Index=0
+
+[Average Depth]
+Index=0
+
+[Ranging Mode]
+Index=0
+
+[Phase_Neutral]
+Index=0
