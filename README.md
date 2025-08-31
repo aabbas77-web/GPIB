@@ -3,7 +3,7 @@
 # By Dr. Ali Abbas aabbas7@gmail.com
 # Programming Language: C++Builder 5
 ## I am trying to revive the programs I developed throughout my long career
-## This Program since 03/10/2004
+## This Program since 19/11/2001
 
 **GPIB General Purpose Interface Bus (IEEE-488)**
 
