@@ -7,6 +7,6 @@
 
 **GPIB General Purpose Interface Bus (IEEE-488)**
 
-[![GPIB](https://github.com/aabbas77-web/FamillyTree2/releases/download/FirstRelease/FamillyTree2.png)](https://www.youtube.com/watch?v=0X3ONNn12NA)
+[![GPIB](https://github.com/aabbas77-web/GPIB/releases/download/FirstRelease/GPIBVideo.png)](https://www.youtube.com/watch?v=xOwD8NKg0nE)
 
 
