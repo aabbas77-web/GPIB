@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#include <windows.h>
+#include "About.h"
+#include "Device.h"
+//---------------------------------------------------------------------------
+#pragma hdrstop
+//---------------------------------------------------------------------------
+#pragma argsused
+//---------------------------------------------------------------------------
+extern "C" __declspec(dllexport) void About(TDevice *Device);
+//---------------------------------------------------------------------------
+void About(TDevice *Device)
+{
+ try
+  {
+   AnsiString DeviceName=Device->DeviceName;
+  }
+ catch(...)
+  {
+   MessageDlg("Invalid About Library ...!",mtError,TMsgDlgButtons()<<mbOK,0);
+   return;
+  }
+
+ TFormAbout *Dialog=new TFormAbout(Application);
+ Dialog->ShowModal();
+ if(Dialog)
+  delete Dialog;
+}
+//---------------------------------------------------------------------------
+int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
+{
+        return 1;
+}
+//---------------------------------------------------------------------------
+ 
