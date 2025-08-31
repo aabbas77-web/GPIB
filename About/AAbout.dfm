@@ -1,6 +1,6 @@
 object FormAAbout: TFormAAbout
-  Left = 190
-  Top = 304
+  Left = 181
+  Top = 119
   AutoSize = True
   BorderIcons = []
   BorderStyle = bsNone

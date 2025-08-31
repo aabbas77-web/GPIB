@@ -6,7 +6,7 @@ object FormAbout: TFormAbout
   BorderStyle = bsNone
   Caption = 'GPIB V1.0'
   ClientHeight = 80
-  ClientWidth = 104
+  ClientWidth = 120
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,6 +22,12 @@ object FormAbout: TFormAbout
   OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 13
+  object AGif1: TAGif
+    Left = 0
+    Top = 0
+    Width = 0
+    Height = 0
+  end
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -32,13 +38,5 @@ object FormAbout: TFormAbout
     BevelWidth = 3
     BorderWidth = 2
     TabOrder = 0
-    object AGif1: TAGif
-      Left = 8
-      Top = 8
-      Width = 64
-      Height = 64
-      Cursor = crHandPoint
-      OnClick = AGif1Click
-    end
   end
 end

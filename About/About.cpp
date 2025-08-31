@@ -32,7 +32,7 @@ void __fastcall TFormAbout::FormActivate(TObject *Sender)
  IsFirst=false; 
 
  if(Loaded)
-  AGif1->Animate=true;
+  AGif1->SetAnimate(true);
  else
   Close(); 
 }
@@ -40,7 +40,7 @@ void __fastcall TFormAbout::FormActivate(TObject *Sender)
 
 void __fastcall TFormAbout::FormDeactivate(TObject *Sender)
 {
- AGif1->Animate=false;
+ AGif1->SetAnimate(false);
 }
 //---------------------------------------------------------------------------
 
@@ -53,9 +53,9 @@ void __fastcall TFormAbout::FormKeyDown(TObject *Sender, WORD &Key,
     if(UpperCase(Ali).Pos(UpperCase("Ali"))>0)
      {
       FormAAbout=new TFormAAbout(Application);
-      AGif1->Animate=false;
+      AGif1->SetAnimate(false);
       FormAAbout->ShowModal();
-      AGif1->Animate=true;
+      AGif1->SetAnimate(true);
       if(FormAAbout)
        delete FormAAbout;
       Ali="";

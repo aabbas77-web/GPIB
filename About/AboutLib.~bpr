@@ -18,7 +18,7 @@
       DSS50.bpi TEEQR50.bpi VCLIB50.bpi VCLMID50.bpi VCLIE50.bpi INETDB50.bpi 
       INET50.bpi NMFAST50.bpi WEBMID50.bpi bcbie50.bpi dclocx50.bpi 
       bcb97axserver50.bpi"/>
-    <PATHCPP value=".;..\GPIB"/>
+    <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -28,15 +28,13 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
     <MAINSOURCE value="AboutLib.bpf"/>
-    <INCLUDEPATH value="..\GPIB;&quot;D:\Program Files\Borland\CBuilder5\Projects\&quot;;&quot;D:\Program Files\Borland\AGif\&quot;;$(BCB)\include;$(BCB)\include\vcl;&quot;E:\KeepDisks\Components\Center_Proj\AliComp\AGif\&quot;"/>
-    <LIBPATH value="..\GPIB;&quot;D:\Program Files\Borland\CBuilder5\Projects\&quot;;$(BCB)\Projects\Lib;&quot;D:\Program Files\Borland\AGif\&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="..\GPIB;..;&quot;D:\Program Files\Borland\CBuilder5\Projects\&quot;;..\AGif;$(BCB)\include;$(BCB)\include\vcl;AGif"/>
+    <LIBPATH value="..\GPIB;$(BCB)\Projects\Lib;AGif;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I..\GPIB -I&quot;D:\Program Files\Borland\CBuilder5\Projects\.&quot; 
-      -I&quot;D:\Program Files\Borland\AGif\.&quot; -I$(BCB)\include -I$(BCB)\include\vcl 
-      -I&quot;E:\KeepDisks\Components\Center_Proj\AliComp\AGif\.&quot; -src_suffix cpp 
-      -D_DEBUG -boa"/>
+    <IDLCFLAGS value="-I..\GPIB -I.. -I&quot;D:\Program Files\Borland\CBuilder5\Projects\.&quot; -I..\AGif 
+      -I$(BCB)\include -I$(BCB)\include\vcl -IAGif -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
       -tWD -tWM -c"/>
     <PFLAGS value="-$YD -$W -$O- -v -JPHNE -M"/>
@@ -78,19 +76,28 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=5
-Item0=D:\Program Files\Borland\CBuilder5\Projects;D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl;E:\KeepDisks\Components\Center_Proj\AliComp\AGif\
-Item1=D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl;E:\KeepDisks\Components\Center_Proj\AliComp\AGif
-Item2=D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl
-Item3=..\;$(BCB)\include;$(BCB)\include\vcl
-Item4=$(BCB)\include;$(BCB)\include\vcl
+Count=11
+Item0=..\;D:\Program Files\Borland\CBuilder5\Projects\;..\AGif;$(BCB)\include;$(BCB)\include\vcl;AGif
+Item1=..\GPIB;D:\Program Files\Borland\CBuilder5\Projects\;..\AGif;$(BCB)\include;$(BCB)\include\vcl;AGif
+Item2=..\GPIB;D:\Program Files\Borland\CBuilder5\Projects\;..\AGif\;$(BCB)\include;$(BCB)\include\vcl;AGif
+Item3=..\GPIB;D:\Program Files\Borland\CBuilder5\Projects\;D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl;AGif
+Item4=..\GPIB;D:\Program Files\Borland\CBuilder5\Projects\;D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl;AGif\
+Item5=..\GPIB;D:\Program Files\Borland\CBuilder5\Projects\;D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl;E:\KeepDisks\Components\Center_Proj\AliComp\AGif\
+Item6=D:\Program Files\Borland\CBuilder5\Projects;D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl;E:\KeepDisks\Components\Center_Proj\AliComp\AGif\
+Item7=D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl;E:\KeepDisks\Components\Center_Proj\AliComp\AGif
+Item8=D:\Program Files\Borland\AGif\;$(BCB)\include;$(BCB)\include\vcl
+Item9=..\;$(BCB)\include;$(BCB)\include\vcl
+Item10=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=4
-Item0=D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\Projects\Lib;D:\Program Files\Borland\AGif\;$(BCB)\lib\obj;$(BCB)\lib
-Item1=$(BCB)\Projects\Lib;D:\Program Files\Borland\AGif\;$(BCB)\lib\obj;$(BCB)\lib
-Item2=..\;$(BCB)\lib\obj;$(BCB)\lib
-Item3=$(BCB)\lib\obj;$(BCB)\lib
+Count=7
+Item0=..\GPIB;$(BCB)\Projects\Lib;AGif;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\GPIB;$(BCB)\Projects\Lib;AGif\;$(BCB)\lib\obj;$(BCB)\lib
+Item2=..\GPIB;D:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\Projects\Lib;D:\Program Files\Borland\AGif\;$(BCB)\lib\obj;$(BCB)\lib
+Item3=D:\Program Files\Borland\CBuilder5\Projects;$(BCB)\Projects\Lib;D:\Program Files\Borland\AGif\;$(BCB)\lib\obj;$(BCB)\lib
+Item4=$(BCB)\Projects\Lib;D:\Program Files\Borland\AGif\;$(BCB)\lib\obj;$(BCB)\lib
+Item5=..\;$(BCB)\lib\obj;$(BCB)\lib
+Item6=$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
